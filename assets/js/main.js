@@ -94,7 +94,7 @@ const scrollActive = () => {
 window.addEventListener("scroll", scrollActive);
 
 /*=============== LIGHT DARK THEME ===============*/
-const themeButton = document.getElementById("themeButton");
+const themeButton = document.getElementById("theme-button");
 const lightTheme = "light-theme";
 const iconTheme = "bx-sun";
 // previously selected topic (if user selected)
@@ -130,3 +130,13 @@ themeButton.addEventListener("click", () => {
 });
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay:400,
+  reset: true,
+});
+sr.reveal('.home__data')
+sr.reveal('.home__handle',{delay:700})
+sr.reveal('.home__social,.home__scroll',{delay:900,origin: 'bottom',})
